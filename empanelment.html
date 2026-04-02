@@ -41,73 +41,7 @@
   /* navbar styles in navbar.css */
   body { font-family: 'Poppins', sans-serif; }
 /*banner*/
-.banner-section {
-            position: relative;
-            background: url('https://images.unsplash.com/photo-1582750433449-648ed127bb54') no-repeat center center/cover;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-            overflow: hidden;
-        }
-
-        .banner-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, #0e8b72);
-        }
-
-        .banner-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .banner-content h1 {
-            font-weight: 700;
-            font-size: 42px;
-        }
-
-        .breadcrumb-custom {
-            background: transparent;
-            justify-content: center;
-            margin-bottom: 0;
-        }
-
-        .breadcrumb-custom a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .breadcrumb-custom .breadcrumb-item + .breadcrumb-item::before {
-            color: #fff;
-        }
-
-        .settings-icon {
-            position: absolute;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: #0d6efd;
-            width: 45px;
-            height: 45px;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 3;
-            cursor: pointer;
-        }
-
-        .settings-icon i {
-            color: #fff;
-            font-size: 20px;
-        }
+.about-shree { background-image: url('https://images.unsplash.com/photo-1582750433449-648ed127bb54'); }
 /*EMPANELMENT*/
 .empanelment-section{
     background:#f3f5f7;
@@ -344,7 +278,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
@@ -365,17 +299,11 @@
   </div>
 </nav>
 <!--banner-->
-<section class="banner-section">
-    <div class="banner-content">
-        <h1>Our Empanelment</h1>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb breadcrumb-custom">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active text-white">Empanelment</li>
-            </ol>
-        </nav>
-    </div>
-    </section>
+<section class="about-shree">
+  <div class="content-container">
+    <h1>Our Empanelment</h1>
+  </div>
+</section>
     <!--EMPANELMENT-->
 <section class="empanelment-section">
 <div class="container">
