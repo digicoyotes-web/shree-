@@ -173,11 +173,13 @@ img { max-width: 100%; display: block; }
 
 /* Tablet */
 @media (max-width: 991px) {
-  .navbar-nav { text-align: center; margin-top: 10px; }
-  .navbar-nav .nav-link { margin: 4px 0; padding: 8px 16px; border-radius: 6px; }
+  .navbar-nav { text-align: right; margin-top: 10px; padding-right: 8px; }
+  .navbar-nav .nav-link { margin: 4px 0; padding: 8px 16px; border-radius: 6px; display: inline-block; }
   .navbar-nav .nav-link:hover { background: #f0faf7; }
-  .appointment-btn { display: block; margin: 12px auto; width: fit-content; }
+  .navbar-collapse { align-items: flex-end !important; }
+  .appointment-btn { display: block; margin: 12px 0 12px auto; width: fit-content; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+  .dropdown-menu { text-align: right; }
 }
 
 /* Mobile */
