@@ -216,7 +216,7 @@ img { max-width: 100%; display: block; }
   }
 
   .navbar-nav {
-    text-align: right;
+    text-align: center;
     width: 100%;
     padding: 4px 0;
   }
@@ -233,7 +233,7 @@ img { max-width: 100%; display: block; }
     padding: 10px 14px;
     border-radius: 6px;
     font-size: 15px;
-    text-align: right;
+    text-align: center;
   }
 
   .navbar-nav .nav-link:hover { background: #f0faf7; }
@@ -246,12 +246,12 @@ img { max-width: 100%; display: block; }
     background: #f8fffe;
     border-radius: 6px;
     padding: 4px 0;
-    text-align: right;
+    text-align: center;
     width: 100%;
   }
 
   .dropdown-item {
-    text-align: right;
+    text-align: center;
     padding: 8px 20px;
   }
 
