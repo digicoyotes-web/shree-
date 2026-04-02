@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -191,6 +191,24 @@ header {
 
   /* Section backgrounds */
   .bg-light { background: #f8fbff; }
+
+  /* ============ MOBILE RESPONSIVE ============ */
+  @media (max-width: 767px) {
+    .about-shree h1 { font-size: 1.8rem; }
+    .section-title h2, .about-content h2, .newsletter-text h2 { font-size: 24px !important; }
+    .about-container { flex-direction: column !important; gap: 24px !important; }
+    .mission-container { grid-template-columns: 1fr !important; }
+    .about-features { grid-template-columns: 1fr !important; }
+    .newsletter-container { flex-direction: column !important; text-align: center !important; }
+    .newsletter-form form { flex-direction: column !important; width: 100% !important; }
+    .newsletter-form input { width: 100% !important; }
+    .newsletter-form button { width: 100% !important; }
+    .form-row { grid-template-columns: 1fr !important; }
+    .appt-form { padding: 24px 16px !important; }
+    .doctor-grid, .associates-grid { grid-template-columns: 1fr !important; }
+    .contact-grid { grid-template-columns: 1fr !important; }
+    .blog-section .container > div { flex-direction: column !important; }
+  }
 </style>
 </head>
 <body>
@@ -198,10 +216,10 @@ header {
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="container">
-    <div>
+    <div class="top-left">
       <span><i class="fas fa-phone"></i> 02164 221 082</span>
       <span><i class="fas fa-envelope"></i> centremanager@nayesha.com</span>
-      <span><i class="fas fa-map-marker-alt"></i> Shree Hospital, Rukmini Nagar, Karad</span>
+      <span class="address-hide"><i class="fas fa-map-marker-alt"></i> Shree Hospital, Rukmini Nagar, Karad</span>
     </div>
     <div class="top-right">
       <a href="https://www.facebook.com/people/Shree-Hospital-Karad/61587661328336/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
