@@ -54,6 +54,7 @@ img { max-width: 100%; display: block; }
   padding: 12px 0;
   background-color: #fff !important;
   font-family: 'Poppins', sans-serif;
+  position: relative;
 }
 
 .logo { height: 50px; }
@@ -178,6 +179,7 @@ img { max-width: 100%; display: block; }
   .navbar > .container {
     flex-wrap: nowrap !important;
     align-items: center !important;
+    position: relative;
   }
 
   /* Order: logo | button | toggler */
@@ -198,27 +200,61 @@ img { max-width: 100%; display: block; }
     flex-shrink: 0;
   }
 
-  /* Collapsed menu drops below full width */
+  /* Collapsed menu — full width, contained, no overflow */
   .navbar-collapse {
     order: 4;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     width: 100%;
-    text-align: right;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    z-index: 999;
+    padding: 10px 20px 16px;
+    border-top: 2px solid #f0faf7;
   }
 
   .navbar-nav {
     text-align: right;
-    padding: 8px 0;
+    width: 100%;
+    padding: 4px 0;
+  }
+
+  .navbar-nav .nav-item {
+    display: block;
+    width: 100%;
   }
 
   .navbar-nav .nav-link {
+    display: block;
+    width: 100%;
     margin: 2px 0;
-    padding: 8px 16px;
+    padding: 10px 14px;
     border-radius: 6px;
-    display: inline-block;
+    font-size: 15px;
+    text-align: right;
   }
 
   .navbar-nav .nav-link:hover { background: #f0faf7; }
-  .dropdown-menu { text-align: right; }
+
+  /* Dropdown inside mobile menu */
+  .dropdown-menu {
+    position: static !important;
+    box-shadow: none;
+    border: none;
+    background: #f8fffe;
+    border-radius: 6px;
+    padding: 4px 0;
+    text-align: right;
+    width: 100%;
+  }
+
+  .dropdown-item {
+    text-align: right;
+    padding: 8px 20px;
+  }
+
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
 }
 
