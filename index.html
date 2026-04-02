@@ -1,4 +1,4 @@
-﻿
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -1037,6 +1037,74 @@
 
   /* Section backgrounds */
   .bg-light { background: #f8fbff; }
+
+  /* ============ MOBILE RESPONSIVE ============ */
+  @media (max-width: 767px) {
+    /* Carousel height */
+    #carouselExampleInterval { height: 55vw !important; min-height: 200px; }
+
+    /* Floating cards */
+    .floating-wrapper { margin-top: 20px; }
+
+    /* Section titles */
+    .section-title h2 { font-size: 26px; }
+    .section { padding: 40px 0; }
+
+    /* Help grid */
+    .help-grid { grid-template-columns: 1fr; gap: 16px; }
+
+    /* Stats bar */
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 16px; }
+    .stat-item:nth-child(even) { border-right: none; }
+    .stat-item:last-child, .stat-item:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+    .stat-item h3 { font-size: 26px; }
+
+    /* Services grid */
+    .services-grid { grid-template-columns: 1fr; }
+
+    /* Gallery grid */
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Treatments grid */
+    .treatments-grid { grid-template-columns: 1fr; }
+
+    /* Testimonials */
+    .testi-grid { grid-template-columns: 1fr; }
+
+    /* Blog grid */
+    .blog-grid { grid-template-columns: 1fr; }
+
+    /* Partners */
+    .partners-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* CTA flex */
+    .appointment-cta .cta-flex { grid-template-columns: 1fr; gap: 24px; }
+    .cta-left h2 { font-size: 26px; }
+    .cta-img { height: 200px; }
+
+    /* Appointment form */
+    .form-row { grid-template-columns: 1fr; }
+    .appt-form { padding: 24px 16px; }
+
+    /* Medical banner */
+    .main-headline { font-size: 1.3rem; }
+    .phone-number { font-size: 1.5rem; }
+
+    /* Welcome section */
+    .welcome-title { font-size: 24px; }
+
+    /* Hero cards */
+    .hero-cards { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 480px) {
+    .stats-grid { grid-template-columns: 1fr; }
+    .hero-cards { grid-template-columns: 1fr; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .partners-grid { grid-template-columns: repeat(2, 1fr); }
+    .section-title h2 { font-size: 22px; }
+  }
 </style>
 </head>
 <body>
@@ -1044,10 +1112,10 @@
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="container">
-    <div>
+    <div class="top-left">
       <span><i class="fas fa-phone"></i> 02164 221 082</span>
       <span><i class="fas fa-envelope"></i> centremanager@nayesha.com</span>
-      <span><i class="fas fa-map-marker-alt"></i> Shree Hospital, Rukmini Nagar, Karad</span>
+      <span class="address-hide"><i class="fas fa-map-marker-alt"></i> Shree Hospital, Rukmini Nagar, Karad</span>
     </div>
     <div class="top-right">
       <a href="https://www.facebook.com/people/Shree-Hospital-Karad/61587661328336/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -1092,25 +1160,22 @@
 <section class="hero">
   <div class="container">-->
     <!---silde-->
-<div id="carouselExampleInterval" class="carousel slide" data-ride="carousel" style="height: 70vh;">
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="height: 70vh;">
   <div class="carousel-inner" style="height: 100%;">
-    <div class="carousel-item active text-center" data-interval="3000" style="height: 100%;">
-      <img src="WhatsApp Image 2026-03-31 at 1.52.36 PM.jpeg" class="d-block w-100 h-100" alt="...">
-     
+    <div class="carousel-item active" data-bs-interval="3000" style="height: 100%;">
+      <img src="WhatsApp Image 2026-03-31 at 1.52.36 PM.jpeg" class="d-block w-100 h-100" style="object-fit:cover;" alt="Shree Hospital">
     </div>
-    <div class="carousel-item" data-interval="2000" style="height: 100%;">
-      <img src="WhatsApp Image 2026-03-30 at 3.56.20 PM.jpeg" class="d-block w-100 h-100" alt="...">
-      
+    <div class="carousel-item" data-bs-interval="2000" style="height: 100%;">
+      <img src="WhatsApp Image 2026-03-30 at 3.56.20 PM.jpeg" class="d-block w-100 h-100" style="object-fit:cover;" alt="Shree Hospital">
     </div>
-    
   </div>
-  <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval" data-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+    <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-target="#carouselExampleInterval" data-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+    <span class="visually-hidden">Next</span>
   </button>
 </div>
 
