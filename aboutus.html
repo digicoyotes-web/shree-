@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -528,15 +528,32 @@ body {
   /* Section backgrounds */
   .bg-light { background: #f8fbff; }
 
+  /* ============ MOBILE RESPONSIVE ============ */
+  @media (max-width: 767px) {
+    .about-container { flex-direction: column; gap: 24px; }
+    .about-content h2 { font-size: 24px; }
+    .mission-container { grid-template-columns: 1fr; }
+    .about-features { grid-template-columns: 1fr; }
+    .newsletter-container { flex-direction: column; text-align: center; }
+    .newsletter-form form { flex-direction: column; width: 100%; }
+    .newsletter-form input { width: 100%; }
+    .newsletter-form button { width: 100%; }
+    .newsletter-text h2 { font-size: 24px; }
+    .about-section { padding: 40px 0; }
+    .mission-section { padding: 40px 0; }
+    .about-health { padding: 40px 0; }
+    .newsletter { padding: 40px 0; }
+  }
+
 
 </style>
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="container">
-    <div>
+    <div class="top-left">
       <span><i class="fas fa-phone"></i> 02164 221 082</span>
       <span><i class="fas fa-envelope"></i> centremanager@nayesha.com</span>
-      <span><i class="fas fa-map-marker-alt"></i> Shree Hospital, Rukmini Nagar, Karad</span>
+      <span class="address-hide"><i class="fas fa-map-marker-alt"></i> Shree Hospital, Rukmini Nagar, Karad</span>
     </div>
     <div class="top-right">
       <a href="https://www.facebook.com/people/Shree-Hospital-Karad/61587661328336/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
