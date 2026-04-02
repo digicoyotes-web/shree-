@@ -1,0 +1,137 @@
+/* ===== SHARED NAVBAR STYLES - Shree Hospital ===== */
+/* Font: Poppins (loaded via Google Fonts in each page) */
+
+* , *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --green: #0e8b72;
+  --green-mid: #1E9B85;
+  --orange: #F26B21;
+  --white: #fff;
+  --text: #333;
+  --text-light: #666;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* ---- TOP BAR ---- */
+.topbar {
+  background: var(--green);
+  padding: 6px 0;
+}
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topbar span {
+  color: rgba(255,255,255,0.85);
+  font-size: 12px;
+  margin-right: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+.topbar span i { margin-right: 5px; }
+.topbar .top-right a {
+  color: rgba(255,255,255,0.85);
+  font-size: 12px;
+  margin-left: 12px;
+  transition: color 0.2s;
+}
+.topbar .top-right a:hover { color: #fff; }
+
+/* ---- NAVBAR ---- */
+.navbar {
+  padding: 15px 0;
+  background-color: #fff !important;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo { height: 55px; }
+
+.navbar-nav .nav-link {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--green-mid) !important;
+  margin: 0 10px;
+  transition: color 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--green) !important;
+}
+
+.dropdown-item {
+  color: var(--green-mid) !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+.dropdown-item:hover {
+  background-color: #f0faf7;
+  color: var(--green) !important;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+/* ---- APPOINTMENT BUTTON ---- */
+.appointment-btn {
+  background: var(--orange);
+  color: #fff !important;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.appointment-btn:hover {
+  background: #d45a15;
+  color: #fff !important;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 991px) {
+  .navbar-nav { text-align: center; margin-top: 15px; }
+  .appointment-btn { display: block; margin: 15px auto; }
+}
+
+/* ---- PAGE BANNER (used on inner pages) ---- */
+.page-banner {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background: linear-gradient(rgba(14,139,114,0.88), rgba(14,139,114,0.78)),
+              url('https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.page-banner h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+}
+.page-banner p {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-family: 'Poppins', sans-serif;
+}
+@media (max-width: 768px) {
+  .page-banner { height: auto; padding: 50px 20px; }
+  .page-banner h1 { font-size: 2rem; }
+}
