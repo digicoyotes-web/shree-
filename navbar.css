@@ -1,7 +1,6 @@
 /* ===== SHARED NAVBAR STYLES - Shree Hospital ===== */
-/* Font: Poppins (loaded via Google Fonts in each page) */
 
-* , *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
   --green: #0e8b72;
@@ -31,36 +30,39 @@ img { max-width: 100%; display: block; }
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 .topbar span {
   color: rgba(255,255,255,0.85);
   font-size: 12px;
-  margin-right: 15px;
+  margin-right: 12px;
   font-family: 'Poppins', sans-serif;
+  white-space: nowrap;
 }
-.topbar span i { margin-right: 5px; }
+.topbar span i { margin-right: 4px; }
 .topbar .top-right a {
   color: rgba(255,255,255,0.85);
   font-size: 12px;
-  margin-left: 12px;
+  margin-left: 10px;
   transition: color 0.2s;
 }
 .topbar .top-right a:hover { color: #fff; }
 
 /* ---- NAVBAR ---- */
 .navbar {
-  padding: 15px 0;
+  padding: 12px 0;
   background-color: #fff !important;
   font-family: 'Poppins', sans-serif;
 }
 
-.logo { height: 55px; }
+.logo { height: 50px; }
 
 .navbar-nav .nav-link {
   font-size: 15px;
   font-weight: 500;
   color: var(--green-mid) !important;
-  margin: 0 10px;
+  margin: 0 8px;
   transition: color 0.3s;
   font-family: 'Poppins', sans-serif;
 }
@@ -87,7 +89,7 @@ img { max-width: 100%; display: block; }
 .appointment-btn {
   background: var(--orange);
   color: #fff !important;
-  padding: 10px 22px;
+  padding: 9px 20px;
   border-radius: 30px;
   font-weight: 600;
   font-size: 14px;
@@ -101,37 +103,106 @@ img { max-width: 100%; display: block; }
   color: #fff !important;
 }
 
-/* ---- RESPONSIVE ---- */
-@media (max-width: 991px) {
-  .navbar-nav { text-align: center; margin-top: 15px; }
-  .appointment-btn { display: block; margin: 15px auto; }
-}
-
-/* ---- PAGE BANNER (used on inner pages) ---- */
-.page-banner {
+/* ---- PAGE BANNER ---- */
+.about-shree {
   position: relative;
   width: 100%;
   height: 260px;
-  background: linear-gradient(rgba(14,139,114,0.88), rgba(14,139,114,0.78)),
-              url('https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  min-height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
+}
+.about-shree::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(14, 139, 114, 0.85);
+  z-index: 1;
+}
+.content-container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 2rem 1.5rem;
   color: #fff;
 }
-.page-banner h1 {
+.about-shree h1 {
   font-size: 2.8rem;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
   margin-bottom: 10px;
 }
-.page-banner p {
+.about-shree p {
   font-size: 1rem;
   opacity: 0.9;
   font-family: 'Poppins', sans-serif;
 }
-@media (max-width: 768px) {
-  .page-banner { height: auto; padding: 50px 20px; }
-  .page-banner h1 { font-size: 2rem; }
+
+/* ---- FOOTER MOBILE ---- */
+.footer { background: #1a252f; color: rgba(255,255,255,0.75); padding: 60px 0 0; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer h4 { font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 600; color: #fff; margin-bottom: 16px; }
+.footer p { font-size: 13px; line-height: 1.8; }
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 8px; }
+.footer-links a { font-size: 13px; color: rgba(255,255,255,0.7); transition: color 0.2s; display: flex; align-items: center; gap: 6px; }
+.footer-links a::before { content: '›'; color: #0e8b72; }
+.footer-links a:hover { color: #0e8b72; }
+.footer-contact { list-style: none; }
+.footer-contact li { display: flex; gap: 10px; margin-bottom: 10px; font-size: 13px; align-items: flex-start; }
+.footer-contact li i { color: #0e8b72; margin-top: 2px; }
+.footer .social-links { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+.footer .social-links a { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); transition: all 0.2s; }
+.footer .social-links a:hover { background: #0e8b72; color: #fff; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding: 18px 0; text-align: center; font-size: 13px; color: rgba(255,255,255,0.5); }
+
+/* ============================================
+   MOBILE RESPONSIVE - ALL PAGES
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 991px) {
+  .navbar-nav { text-align: center; margin-top: 10px; }
+  .navbar-nav .nav-link { margin: 4px 0; padding: 8px 16px; border-radius: 6px; }
+  .navbar-nav .nav-link:hover { background: #f0faf7; }
+  .appointment-btn { display: block; margin: 12px auto; width: fit-content; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  /* Topbar - hide address on small screens, keep phone + social */
+  .topbar .container { justify-content: center; }
+  .topbar .top-left { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; }
+  .topbar span.address-hide { display: none; }
+  .topbar .top-right { margin-top: 2px; }
+
+  /* Logo smaller */
+  .logo { height: 42px; }
+
+  /* Page banner */
+  .about-shree { height: auto; padding: 50px 16px; min-height: 160px; }
+  .about-shree h1 { font-size: 1.8rem; }
+  .about-shree p { font-size: 0.9rem; }
+
+  /* Footer stacks to 1 column */
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .footer { padding: 40px 0 0; }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .about-shree h1 { font-size: 1.5rem; }
+  .topbar span { font-size: 11px; margin-right: 6px; }
 }
